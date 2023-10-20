@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+
+const int NUM_QUESTIONS = 3;
+
+// Define an array of questions and their corresponding answer choices
+const std::string questions[NUM_QUESTIONS] = {
+    "What is the capital of France?",
+    "Which planet is known as the Red Planet?",
+    "What is the largest mammal in the world?"
+};
+
+const std::string answerChoices[NUM_QUESTIONS][4] = {
+    {"A) London", "B) Berlin", "C) Paris", "D) Madrid"},
+    {"A) Venus", "B) Mars", "C) Jupiter", "D) Saturn"},
+    {"A) African Elephant", "B) Blue Whale", "C) Giraffe", "D) Rhinoceros"}
+};
+
+const char correctAnswers[NUM_QUESTIONS] = {'C', 'B', 'B'};
+
+int main() {
+    srand(static_cast<unsigned int>(time(0)));
+
+    int score = 0;
+
+    for (int i = 0; i < NUM_QUESTIONS; ++i) {
+        int randomIndex = rand() % 4;
+
+        // Display the question and answer choices
+        std::cout << "Question " << (i + 1) << ": " << questions[i] << std::endl;
+        for (int j = 0; j < 4; ++j) {
+            std::cout << answerChoices[i][(j + randomIndex) % 4] << std::endl;
+        }
+
+        // Get the user's answer
+        char userAnswer;
+        std::cout << "Your answer (A, B, C, or D): ";
+        std::cin >> userAnswer;
+
+        // Check if the user's answer is correct
+        if (toupper(userAnswer) == correctAnswers[i]) {
+            std::cout << "Correct!\n";
+            score++;
+        } else {
+            std::cout << "Incorrect. The correct answer is " << correctAnswers[i] << ".\n";
+        }
+    }
+
+    // Determine the outcome
+    if (score == NUM_QUESTIONS) {
+        std::cout << "Congratulations! You won with a perfect score!" << std::endl;
+    } else {
+        std::cout << "Sorry, you didn't answer all questions correctly. You scored " << score << " out of " << NUM_QUESTIONS << "." << std::endl;
+    }
+
+    return 0;
+}

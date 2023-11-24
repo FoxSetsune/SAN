@@ -1,0 +1,158 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+const int SIZE = 3;
+
+// Function to initialize the game board
+void initializeBoard(char board[][SIZE]) {
+    for (int i = 0; i < SIZE; ++i) {
+        for (int j = 0; j < SIZE; ++j) {
+            board[i][j] = ' ';
+        }
+    }
+}
+
+// Function to display the game board
+void displayBoard(const char board[][SIZE]) {
+    cout << "-------------" << endl;
+    for (int i = 0; i < SIZE; ++i) {
+        cout << "| ";
+        for (int j = 0; j < SIZE; ++j) {
+            cout << board[i][j] << " | ";
+        }
+        cout << endl;
+        cout << "-------------" << endl;
+    }
+}
+
+// Function to check if a player has won
+bool checkWin(const char board[][SIZE], char player) {
+    // Check rows and columns
+    for (int i = 0; i < SIZE; ++i) {
+        if ((board[i][0] == player && board[i][1] == player && board[i][2] == player) ||
+            (board[0][i] == player && board[1][i] == player && board[2][i] == player)) {
+            return true;
+        }
+    }
+
+    // Check diagonals
+    if ((board[0][0] == player && board[1][1] == player && board[2][2] == player) ||
+        (board[0][2] == player && board[1][1] == player && board[2][0] == player)) {
+        return true;
+    }
+
+    return false;
+}
+
+// Function to check if the board is full
+bool isBoardFull(const char board[][SIZE]) {
+    for (int i = 0; i < SIZE; ++i) {
+        for (int j = 0; j < SIZE; ++j) {
+            if (board[i][j] == ' ') {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+// Function to get a player's move
+void getPlayerMove(char board[][SIZE], char player) {
+    int row, col;
+    do {
+        cout << "Enter your move (row and column): ";
+        cin >> row >> col;
+    } while (row < 0 || row >= SIZE || col < 0 || col >= SIZE || board[row][col] != ' ');
+
+    board[row][col] = player;
+}
+
+// Function to get the computer's move
+void getComputerMove(char board[][SIZE], char computer) {
+    int row, col;
+    do {
+        row = rand() % SIZE;
+        col = rand() % SIZE;
+    } while (board[row][col] != ' ');
+
+    board[row][col] = computer;
+}
+
+int main() {
+    char board[SIZE][SIZE];
+    char player1, player2;
+    bool playerVsPlayer;
+
+    cout << "Tic-Tac-Toe Game" << endl;
+    cout << "Choose X or O for Player 1: ";
+    cin >> player1;
+
+    if (player1 == 'X' || player1 == 'x') {
+        player2 = 'O';
+    } else {
+        player2 = 'X';
+    }
+
+    cout << "Do you want to play Player vs Player? (1 for Yes, 0 for No): ";
+    cin >> playerVsPlayer;
+
+    initializeBoard(board);
+    displayBoard(board);
+
+    int moves = 0;
+
+    while (true) {
+        // Player 1 move
+        if (playerVsPlayer) {
+            cout << "Player 1's turn (X)" << endl;
+            getPlayerMove(board, player1);
+        } else {
+            cout << "Player's turn (X)" << endl;
+            getPlayerMove(board, player1);
+        }
+
+        ++moves;
+        displayBoard(board);
+
+        if (checkWin(board, player1)) {
+            cout << "Player 1 wins!" << endl;
+            break;
+        }
+
+        if (isBoardFull(board)) {
+            cout << "It's a tie!" << endl;
+            break;
+        }
+
+        // Player 2 move
+        if (playerVsPlayer) {
+            cout << "Player 2's turn (O)" << endl;
+            getPlayerMove(board, player2);
+        } else {
+            cout << "Computer's turn (O)" << endl;
+            getComputerMove(board, player2);
+        }
+
+        ++moves;
+        displayBoard(board);
+
+        if (checkWin(board, player2)) {
+            if (playerVsPlayer) {
+                cout << "Player 2 wins!" << endl;
+            } else {
+                cout << "Computer wins!" << endl;
+            }
+            break;
+        }
+
+        if (isBoardFull(board)) {
+            cout << "It's a tie!" << endl;
+            break;
+        }
+    }
+
+    return 0;
+}

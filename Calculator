@@ -1,0 +1,86 @@
+#include <iostream>
+
+class Calculator {
+public:
+    // Constructor
+    Calculator() {
+        result = 0.0;
+    }
+
+    // Member function to perform the specified operation
+    double performOperation(double a, double b, char operation) {
+        switch (operation) {
+            case '+':
+                result = add(a, b);
+                break;
+            case '-':
+                result = subtract(a, b);
+                break;
+            case '*':
+                result = multiply(a, b);
+                break;
+            case '/':
+                result = divide(a, b);
+                break;
+            default:
+                std::cerr << "Error: Invalid operation." << std::endl;
+                break;
+        }
+        return result;
+    }
+
+    // Member function to get the current result
+    double getResult() const {
+        return result;
+    }
+
+private:
+    double result;
+
+    // Member function to add two numbers
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    // Member function to subtract two numbers
+    double subtract(double a, double b) {
+        return a - b;
+    }
+
+    // Member function to multiply two numbers
+    double multiply(double a, double b) {
+        return a * b;
+    }
+
+    // Member function to divide two numbers
+    double divide(double a, double b) {
+        if (b != 0) {
+            return a / b;
+        } else {
+            std::cerr << "Error: Cannot divide by zero." << std::endl;
+            return 0.0;
+        }
+    }
+};
+
+int main() {
+    Calculator calculator;
+
+    double num1, num2;
+    char operation;
+
+    std::cout << "Enter first number: ";
+    std::cin >> num1;
+
+    std::cout << "Enter operation (+, -, *, /): ";
+    std::cin >> operation;
+
+    std::cout << "Enter second number: ";
+    std::cin >> num2;
+
+    double result = calculator.performOperation(num1, num2, operation);
+
+    std::cout << "Result: " << result << std::endl;
+
+    return 0;
+}

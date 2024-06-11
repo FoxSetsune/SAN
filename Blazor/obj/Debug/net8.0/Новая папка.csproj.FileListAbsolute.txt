@@ -1,0 +1,29 @@
+F:\Новая папка\bin\Debug\net8.0\appsettings.Development.json
+F:\Новая папка\bin\Debug\net8.0\appsettings.json
+F:\Новая папка\bin\Debug\net8.0\Новая_папка.staticwebassets.runtime.json
+F:\Новая папка\bin\Debug\net8.0\Новая_папка.exe
+F:\Новая папка\bin\Debug\net8.0\Новая_папка.deps.json
+F:\Новая папка\bin\Debug\net8.0\Новая_папка.runtimeconfig.json
+F:\Новая папка\bin\Debug\net8.0\Новая_папка.dll
+F:\Новая папка\bin\Debug\net8.0\Новая_папка.pdb
+F:\Новая папка\obj\Debug\net8.0\Новая папка.GeneratedMSBuildEditorConfig.editorconfig
+F:\Новая папка\obj\Debug\net8.0\Новая папка.AssemblyInfoInputs.cache
+F:\Новая папка\obj\Debug\net8.0\Новая папка.AssemblyInfo.cs
+F:\Новая папка\obj\Debug\net8.0\Новая папка.csproj.CoreCompileInputs.cache
+F:\Новая папка\obj\Debug\net8.0\Новая_папка.MvcApplicationPartsAssemblyInfo.cache
+F:\Новая папка\obj\Debug\net8.0\staticwebassets.build.json
+F:\Новая папка\obj\Debug\net8.0\staticwebassets.development.json
+F:\Новая папка\obj\Debug\net8.0\staticwebassets\msbuild.Новая_папка.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Новая папка\obj\Debug\net8.0\staticwebassets\msbuild.build.Новая_папка.props
+F:\Новая папка\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Новая_папка.props
+F:\Новая папка\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Новая_папка.props
+F:\Новая папка\obj\Debug\net8.0\staticwebassets.pack.json
+F:\Новая папка\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+F:\Новая папка\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+F:\Новая папка\obj\Debug\net8.0\scopedcss\bundle\Новая_папка.styles.css
+F:\Новая папка\obj\Debug\net8.0\scopedcss\projectbundle\Новая_папка.bundle.scp.css
+F:\Новая папка\obj\Debug\net8.0\Новая_папка.dll
+F:\Новая папка\obj\Debug\net8.0\refint\Новая_папка.dll
+F:\Новая папка\obj\Debug\net8.0\Новая_папка.pdb
+F:\Новая папка\obj\Debug\net8.0\Новая папка.genruntimeconfig.cache
+F:\Новая папка\obj\Debug\net8.0\ref\Новая_папка.dll

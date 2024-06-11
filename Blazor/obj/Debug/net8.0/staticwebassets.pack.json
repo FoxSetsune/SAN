@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Новая папка\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Новая_папка.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Новая_папка.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\Новая папка\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "F:\\Новая папка\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Новая папка\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\Новая папка\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Новая_папка.props",
+      "PackagePath": "build\\Новая_папка.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Новая_папка.props",
+      "PackagePath": "buildMultiTargeting\\Новая_папка.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Новая_папка.props",
+      "PackagePath": "buildTransitive\\Новая_папка.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Новая_папка.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
